@@ -7,7 +7,6 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "inlineSourceMap": true,
-    "module": "CommonJS",
     "moduleResolution": "node",
     "noErrorTruncation": true,
     "noFallthroughCasesInSwitch": true,
@@ -15,11 +14,14 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "../../../lib/",
+    "outFile": "./lib/index.js",
     "strict": true,
-    "target": "es6"
+    "module": "AMD",
+    "target": "es6",
+    "lib": ["es5", "es6", "dom"],
+    "rootDir": "./src/"
   },
   "exclude": [
-    "../../../lib/"
+    "lib"
   ]
 }
