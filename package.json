@@ -1,5 +1,5 @@
 {
-  "name": "hypnothing-core",
+  "name": "@wulkanat/hypnothing-core",
   "version": "1.0.0",
   "scripts": {
     "build": "npm run lint && npm run compile && npm run schema && npm run mappings",
