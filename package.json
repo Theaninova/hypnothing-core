@@ -1,0 +1,40 @@
+{
+  "name": "hypnothing-core",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm run lint && npm run compile && npm run schema && npm run mappings",
+    "schema": "typescript-json-schema tsconfig.json * -o lib/schema.json",
+    "mappings": "mkdir lib\\mappings && openstapps-es-mapping-generator mapping ./src -i minlength,pattern,see,tjs-format -m lib/mappings/mappings.json -a lib/mappings/aggregations.json",
+    "compile": "rimraf lib && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postversion": "npm run changelog",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "prepublishOnly": "npm ci && npm run build",
+    "preversion": "npm run prepublishOnly",
+    "push": "git push && git push origin \"v$npm_package_version\""
+  },
+  "devDependencies": {
+    "@openstapps/es-mapping-generator": "0.0.3",
+    "typescript": "4.4.3",
+    "@typescript-eslint/parser": "4.33.0",
+    "@typescript-eslint/eslint-plugin": "4.33.0",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-jsdoc": "36.1.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-unicorn": "36.0.0",
+    "prettier": "2.4.1",
+    "typescript-json-schema": "0.51.0",
+    "rimraf": "3.0.2"
+  },
+  "keywords": [],
+  "author": "Theania",
+  "license": "MIT",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "description": ""
+}
