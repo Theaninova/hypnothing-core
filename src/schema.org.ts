@@ -56,4 +56,14 @@ export interface CreativeWork {
    * If there is no speaker given, it is assumed the author is the speaker
    */
   speaker?: Author;
+
+  /**
+   * @keyword
+   */
+  language: string;
+
+  /**
+   * If there are any translated works available, they will be listed here.
+   */
+  translatedWorks: Record<string, Uuid>;
 }
