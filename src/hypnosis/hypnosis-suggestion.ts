@@ -10,5 +10,19 @@ export interface HypnosisSuggestion extends CreativeWork, TranceSection, Hypnosi
   content?: TranceWithShortLongAndSummary;
   alternatives?: Uuid[];
 
+  /**
+   * Just short form warnings
+   *
+   * @text
+   */
+  warnings: string[];
+
+  /**
+   * Just a short form safeties list
+   *
+   * @text
+   */
+  safeties: string[];
+
   type: HypnosisType.SUGGESTION;
 }

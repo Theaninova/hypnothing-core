@@ -3,6 +3,7 @@ import {HypnosisSafetyGuard} from './hypnosis-safety';
 import {TranceDepth} from '../trance/trance';
 import {HypnosisSuggestion} from './hypnosis-suggestion';
 import {HypnosisThing, HypnosisType} from './hypnosis';
+import {HypnosisWarning} from "./hypnosis-warning";
 
 /**
  * @indexable
@@ -13,6 +14,7 @@ export interface HypnosisFile extends CreativeWork, HypnosisThing {
    */
   overviewSrc: string;
   safeties: HypnosisSafetyGuard[];
+  warnings: HypnosisWarning[];
   suggestions: HypnosisSuggestion[];
 
   /**

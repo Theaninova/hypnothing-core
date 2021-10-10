@@ -4,9 +4,11 @@ export enum HypnosisType {
   FILE = 'file',
   INDUCTION = 'induction',
   SAFETY = 'safety',
+  WARNING = 'warning',
   SUGGESTION = 'suggestion',
   TRIGGER = 'trigger',
   WAKER = 'waker',
+  AUTHOR = 'author',
 }
 
 export interface HypnosisThing {

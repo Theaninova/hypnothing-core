@@ -1,3 +1,5 @@
+import {HypnosisThing, HypnosisType} from './hypnosis/hypnosis';
+
 export enum Gender {
   Male = 'male',
   Female = 'female',
@@ -9,7 +11,10 @@ export enum Gender {
  */
 export type Uuid = string;
 
-export interface Author {
+/**
+ * @indexable
+ */
+export interface Author extends HypnosisThing {
   /**
    * @keyword
    * @filterable
@@ -37,6 +42,9 @@ export interface Author {
    * @aggregatable
    */
   additionalName: string;
+
+  type: HypnosisType.AUTHOR;
+  tags: undefined;
 }
 
 export interface Map<T> {
