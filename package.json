@@ -1,6 +1,6 @@
 {
   "name": "@wulkanat/hypnothing-core",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "scripts": {
     "build": "npm run lint && npm run compile && npm run schema && npm run mappings",
     "schema": "typescript-json-schema tsconfig.json * -o lib/schema/schema.json",
