@@ -44,7 +44,6 @@ export interface Author extends HypnosisThing {
   additionalName: string;
 
   type: HypnosisType.AUTHOR;
-  tags: undefined;
 }
 
 export interface Map<T> {
