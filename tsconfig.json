@@ -14,11 +14,10 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outFile": "./lib/index.js",
     "strict": true,
-    "module": "AMD",
+    "module": "CommonJS",
     "target": "es6",
-    "lib": ["es5", "es6", "dom"],
+    "outDir": "./lib/",
     "rootDir": "./src/"
   },
   "exclude": [

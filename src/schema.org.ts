@@ -39,6 +39,10 @@ export interface Author {
   additionalName: string;
 }
 
+export interface Map<T> {
+  [key: string]: T;
+}
+
 export interface CreativeWork {
   /**
    * @keyword
@@ -65,5 +69,5 @@ export interface CreativeWork {
   /**
    * If there are any translated works available, they will be listed here.
    */
-  translatedWorks: Record<string, Uuid>;
+  translatedWorks: Map<Uuid>;
 }
