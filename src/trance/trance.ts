@@ -1,10 +1,10 @@
-import {VolumeKeyframe} from '../audio';
+import {BinauralKeyframe, VolumeKeyframe} from '../audio';
 
 export interface TranceSection {
   /**
    * Keyframes of where the binaural should start or stop or change in loudness
    */
-  binauralKeyframes?: VolumeKeyframe[];
+  binauralKeyframes?: BinauralKeyframe[];
   noiseKeyframes?: VolumeKeyframe[];
 }
 
