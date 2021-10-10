@@ -1,6 +1,6 @@
 import {CreativeWork} from '../schema.org';
 import {TranceWithIntroductionAndReminder} from '../trance/trance';
-import {HypnosisThing, HypnosisType} from './hypnosis';
+import {HypnosisThing, HypnosisType} from '../hypnosis';
 
 /**
  * @indexable

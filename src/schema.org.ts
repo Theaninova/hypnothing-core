@@ -1,4 +1,4 @@
-import {HypnosisThing, HypnosisType} from './hypnosis/hypnosis';
+import {HypnosisThing, HypnosisType} from './hypnosis';
 
 export enum Gender {
   Male = 'male',
@@ -62,12 +62,12 @@ export interface CreativeWork {
    * @text
    */
   description: string;
-  author: Author;
+  author: Uuid;
 
   /**
    * If there is no speaker given, it is assumed the author is the speaker
    */
-  speaker?: Author;
+  speaker?: Uuid;
 
   /**
    * @keyword
@@ -76,6 +76,13 @@ export interface CreativeWork {
 
   /**
    * If there are any translated works available, they will be listed here.
+   *
+   * LANG_CODE -> FILE_UUID
    */
   translatedWorks: Map<Uuid>;
+
+  /**
+   * SpeakerUUID -> FileUUID
+   */
+  alternatives?: Map<Uuid>;
 }

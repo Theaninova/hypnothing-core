@@ -1,5 +1,5 @@
 import {CreativeWork} from '../schema.org';
-import {HypnosisThing, HypnosisType} from './hypnosis';
+import {HypnosisThing, HypnosisType} from '../hypnosis';
 
 /**
  * @indexable

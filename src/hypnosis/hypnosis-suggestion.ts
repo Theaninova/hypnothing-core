@@ -1,6 +1,6 @@
-import {CreativeWork, Uuid} from '../schema.org';
+import {CreativeWork} from '../schema.org';
 import {TranceSection, TranceWithShortLongAndSummary} from '../trance/trance';
-import {HypnosisThing, HypnosisType} from './hypnosis';
+import {HypnosisThing, HypnosisType} from '../hypnosis';
 
 /**
  * @indexable
@@ -8,7 +8,6 @@ import {HypnosisThing, HypnosisType} from './hypnosis';
 export interface HypnosisSuggestion extends CreativeWork, TranceSection, HypnosisThing {
   isRequired: boolean;
   content?: TranceWithShortLongAndSummary;
-  alternatives?: Uuid[];
 
   /**
    * Just short form warnings

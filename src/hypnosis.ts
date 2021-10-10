@@ -1,4 +1,4 @@
-import {Uuid} from '../schema.org';
+import {Uuid} from './schema.org';
 
 export enum HypnosisType {
   FILE = 'file',

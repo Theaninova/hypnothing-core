@@ -22,6 +22,11 @@ export interface TranceWithIntroductionAndReminder {
 
 export interface TranceWithShortLongAndSummary {
   /**
+   * An introduction when the overview is spoken
+   */
+  overviewIntroductionSrc: string;
+
+  /**
    * @keyword
    */
   shortSrc: string;
