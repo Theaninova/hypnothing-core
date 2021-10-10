@@ -7,7 +7,7 @@ import {HypnosisThing, HypnosisType} from '../hypnosis';
  */
 export interface HypnosisSuggestion extends CreativeWork, TranceSection, HypnosisThing {
   isRequired: boolean;
-  content?: TranceWithShortLongAndSummary;
+  content: TranceWithShortLongAndSummary;
 
   /**
    * Just short form warnings
