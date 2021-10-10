@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/wulkanat/hypnothing-core/compare/v1.3.0...v1.4.0) (2021-10-10)
+
+
+### Features
+
+* add hypnosis type enumeration and specific type ([13bd0dc](https://github.com/wulkanat/hypnothing-core/commit/13bd0dcebfee4c1d54fe431a32903f1f659b9897))
+
+
+
 # [1.3.0](https://github.com/wulkanat/hypnothing-core/compare/v1.2.0...v1.3.0) (2021-10-10)
 
 
