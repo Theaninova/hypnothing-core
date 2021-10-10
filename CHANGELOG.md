@@ -1,3 +1,12 @@
+# [1.3.0](https://github.com/wulkanat/hypnothing-core/compare/v1.2.0...v1.3.0) (2021-10-10)
+
+
+### Features
+
+* warnings, adjustements ([9033f26](https://github.com/wulkanat/hypnothing-core/commit/9033f267d73180011a711cba9f765d82e7082f95))
+
+
+
 # [1.2.0](https://github.com/wulkanat/hypnothing-core/compare/1.1.0...v1.2.0) (2021-10-10)
 
 
