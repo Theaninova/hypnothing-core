@@ -1,7 +1,7 @@
 import {CreativeWork} from '../schema.org';
 import {TranceDepth, TranceSection} from './trance';
 import {HypnosisThing, HypnosisType} from '../hypnosis';
-import {AudioOptions} from "../audio";
+import {AudioOptions} from '../audio';
 
 /**
  * @indexable

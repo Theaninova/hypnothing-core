@@ -1,6 +1,6 @@
 import {CreativeWork} from '../schema.org';
 import {HypnosisThing, HypnosisType} from '../hypnosis';
-import {AudioOptions} from "../audio";
+import {AudioOptions} from '../audio';
 
 /**
  * @indexable
