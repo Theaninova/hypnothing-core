@@ -62,11 +62,7 @@ export interface CreativeWork {
    */
   description: string;
   author: Uuid;
-
-  /**
-   * If there is no speaker given, it is assumed the author is the speaker
-   */
-  speaker?: Uuid;
+  speaker: Uuid;
 
   /**
    * @keyword
