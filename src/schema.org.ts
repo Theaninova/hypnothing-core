@@ -61,23 +61,14 @@ export interface CreativeWork {
    * @text
    */
   description: string;
-  author: Uuid;
-  speaker: Uuid;
 
   /**
-   * @keyword
+   * List of audio files
    */
-  language: string;
+  audio: Uuid[];
 
   /**
-   * If there are any translated works available, they will be listed here.
-   *
-   * LANG_CODE -> FILE_UUID
+   * If there are any alternate versions (say with different intensities)
    */
-  translatedWorks: Map<Uuid>;
-
-  /**
-   * SpeakerUUID -> FileUUID
-   */
-  alternatives?: Map<Uuid>;
+  alternatives?: Uuid[];
 }

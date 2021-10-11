@@ -6,6 +6,7 @@ import {HypnosisSuggestion} from './hypnosis/hypnosis-suggestion';
 import {HypnosisTrigger} from './hypnosis/hypnosis-trigger';
 import {HypnosisWaker} from './hypnosis/hypnosis-waker';
 import {HypnosisWarning} from './hypnosis/hypnosis-warning';
+import {AudioFile} from './audio';
 
 export enum HypnosisType {
   AUTHOR = 'author',
@@ -16,6 +17,7 @@ export enum HypnosisType {
   TRIGGER = 'trigger',
   WAKER = 'waker',
   WARNING = 'warning',
+  AUDIO_FILE = 'audio file',
 }
 
 export type SpecificHypnosisType<T> = T extends 'author'
@@ -34,6 +36,8 @@ export type SpecificHypnosisType<T> = T extends 'author'
   ? HypnosisWaker
   : T extends 'warning'
   ? HypnosisWarning
+  : T extends 'audio file'
+  ? AudioFile
   : never;
 
 export type HypnosisTypeEnumerator =
@@ -44,7 +48,8 @@ export type HypnosisTypeEnumerator =
   | 'suggestion'
   | 'trigger'
   | 'waker'
-  | 'warning';
+  | 'warning'
+  | 'audio file';
 
 export interface HypnosisThing {
   /**

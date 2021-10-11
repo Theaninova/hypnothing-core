@@ -1,10 +1,36 @@
 import {Keyframe} from './keyframes';
+import {HypnosisThing, HypnosisType} from './hypnosis';
+import {Uuid} from './schema.org';
 
 export type VolumeKeyframe = Keyframe<VolumeChoice>;
 
 export interface BinauralBeat {
   volume: VolumeChoice;
   wave: BinauralWaveChoice;
+}
+
+/**
+ * Timestamp ('00:42.222')
+ *
+ * @pattern \d+:\d{2}(\.\d+)?
+ */
+export type Timestamp = string;
+
+export interface AudioFile extends HypnosisThing {
+  slice?: {
+    start?: Timestamp;
+    end?: Timestamp;
+  };
+  src: string;
+
+  /**
+   * @keyword
+   */
+  language: string;
+
+  speaker: Uuid;
+
+  type: HypnosisType.AUDIO_FILE;
 }
 
 export type BinauralKeyframe = Keyframe<BinauralBeat>;
