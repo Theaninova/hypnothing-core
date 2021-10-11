@@ -1,3 +1,12 @@
+## [1.6.1](https://github.com/wulkanat/hypnothing-core/compare/v1.6.0...v1.6.1) (2021-10-11)
+
+
+### Features
+
+* remove audio from creative works ([6da6bef](https://github.com/wulkanat/hypnothing-core/commit/6da6befb5b483982ed000c210c7f61e8e2941aed))
+
+
+
 # [1.6.0](https://github.com/wulkanat/hypnothing-core/compare/v1.5.1...v1.6.0) (2021-10-11)
 
 
