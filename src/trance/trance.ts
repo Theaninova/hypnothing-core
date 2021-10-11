@@ -1,4 +1,4 @@
-import {BinauralKeyframe, VolumeKeyframe} from '../audio';
+import {AudioOptions, BinauralKeyframe, VolumeKeyframe} from '../audio';
 
 export interface TranceSection {
   /**
@@ -12,34 +12,34 @@ export interface TranceWithIntroductionAndReminder {
   /**
    * @keyword
    */
-  introductionSrc: string;
+  introductionAudioOptions: AudioOptions;
 
   /**
    * @keyword
    */
-  reminderSrc: string;
+  reminderAudioOptions: AudioOptions;
 }
 
 export interface TranceWithShortLongAndSummary {
   /**
    * An introduction when the overview is spoken
    */
-  overviewIntroductionSrc: string;
+  overviewIntroductionAudioOptions: AudioOptions;
 
   /**
    * @keyword
    */
-  shortSrc: string;
+  shortAudioOptions: AudioOptions;
 
   /**
    * @keyword
    */
-  longSrc: string;
+  longAudioOptions: AudioOptions;
 
   /**
    * @keyword
    */
-  summarySrc: string;
+  summaryAudioOptions: AudioOptions;
 }
 
 /**

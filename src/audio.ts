@@ -16,6 +16,8 @@ export interface BinauralBeat {
  */
 export type Timestamp = string;
 
+export type AudioOptions = Uuid[];
+
 export interface AudioFile extends HypnosisThing {
   slice?: {
     start?: Timestamp;
