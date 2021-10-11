@@ -1,3 +1,12 @@
+# [1.6.0](https://github.com/wulkanat/hypnothing-core/compare/v1.5.1...v1.6.0) (2021-10-11)
+
+
+### Features
+
+* replace direct audio sources with audio options ([87e55b0](https://github.com/wulkanat/hypnothing-core/commit/87e55b06494afb3430896776bc5dff1ebe967a26))
+
+
+
 ## [1.5.1](https://github.com/wulkanat/hypnothing-core/compare/v1.5.0...v1.5.1) (2021-10-11)
 
 
