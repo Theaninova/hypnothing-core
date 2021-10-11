@@ -68,11 +68,6 @@ export interface CreativeWork {
   author: Uuid;
 
   /**
-   * List of audio files
-   */
-  audio: Uuid[];
-
-  /**
    * If there are any alternate versions (say with different intensities)
    */
   alternatives?: Uuid[];
