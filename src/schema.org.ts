@@ -63,6 +63,11 @@ export interface CreativeWork {
   description: string;
 
   /**
+   * The author of the work (usually the writer)
+   */
+  author: Uuid;
+
+  /**
    * List of audio files
    */
   audio: Uuid[];
