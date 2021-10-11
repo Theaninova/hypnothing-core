@@ -1,10 +1,10 @@
 import {CreativeWork} from '../schema.org';
-import {HypnosisType} from '../hypnosis';
+import {HypnosisThing, HypnosisType} from '../hypnosis';
 
 /**
  * @indexable
  */
-export interface HypnosisWaker extends CreativeWork {
+export interface HypnosisWaker extends CreativeWork, HypnosisThing {
   /**
    * @keyword
    */
