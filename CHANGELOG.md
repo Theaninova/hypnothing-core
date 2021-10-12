@@ -1,3 +1,12 @@
+## [1.8.2](https://github.com/wulkanat/hypnothing-core/compare/v1.8.1...v1.8.2) (2021-10-12)
+
+
+### Features
+
+* add type guards ([42cd004](https://github.com/wulkanat/hypnothing-core/commit/42cd00439ba3ba061b5ca3c4ca00047885e8929a))
+
+
+
 ## [1.8.1](https://github.com/wulkanat/hypnothing-core/compare/v1.8.0...v1.8.1) (2021-10-12)
 
 
