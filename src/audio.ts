@@ -36,7 +36,7 @@ export type Timestamp = Keyword;
 
 export type AudioOptions = AudioReference[];
 
-export type AudioReference = Reference<AudioFile, 'uuid' | 'language' | 'speaker'>;
+export type AudioReference = Reference<AudioFile, 'uuid'>;
 
 export interface AudioFile extends HypnosisThing {
   slice?: {
