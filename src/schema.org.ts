@@ -47,7 +47,7 @@ export interface Author extends HypnosisThing {
   type: HypnosisType.AUTHOR;
 }
 
-export type AuthorReference = Reference<Author, undefined>;
+export type AuthorReference = Reference<Author, never>;
 
 export interface CreativeWork {
   /**

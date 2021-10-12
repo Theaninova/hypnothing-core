@@ -20,4 +20,4 @@ export interface HypnosisTrigger extends CreativeWork, TranceWithIntroductionAnd
   type: HypnosisType.TRIGGER;
 }
 
-export type HypnosisTriggerReference = Reference<HypnosisTrigger, undefined>;
+export type HypnosisTriggerReference = Reference<HypnosisTrigger, never>;

@@ -17,17 +17,7 @@ export interface BinauralBeat {
  */
 export type Timestamp = string;
 
-export type AudioReference = Reference<
-  AudioFile,
-  {
-    /**
-     * @inheritTags audio file::language
-     */
-    language: string;
-
-    speaker: AuthorReference;
-  }
->;
+export type AudioReference = Reference<AudioFile, 'language' | 'speaker'>;
 
 /**
  * This is unfortunately needed to enable filtering

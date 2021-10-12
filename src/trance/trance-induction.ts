@@ -14,4 +14,4 @@ export interface TranceInduction extends CreativeWork, TranceSection, HypnosisTh
   type: HypnosisType.INDUCTION;
 }
 
-export type TranceInductionReference = Reference<TranceInduction, undefined>;
+export type TranceInductionReference = Reference<TranceInduction, never>;

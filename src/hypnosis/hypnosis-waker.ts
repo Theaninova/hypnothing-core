@@ -15,4 +15,4 @@ export interface HypnosisWaker extends CreativeWork, HypnosisThing {
   type: HypnosisType.WAKER;
 }
 
-export type HypnosisWakerReference = Reference<HypnosisWaker, undefined>;
+export type HypnosisWakerReference = Reference<HypnosisWaker, never>;

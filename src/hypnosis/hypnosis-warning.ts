@@ -9,4 +9,4 @@ export interface HypnosisWarning extends CreativeWork, HypnosisThing {
   type: HypnosisType.WARNING;
 }
 
-export type HypnosisWarningReference = Reference<HypnosisWarning, undefined>;
+export type HypnosisWarningReference = Reference<HypnosisWarning, never>;

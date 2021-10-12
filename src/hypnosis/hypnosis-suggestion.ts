@@ -27,4 +27,4 @@ export interface HypnosisSuggestion extends CreativeWork, TranceSection, Hypnosi
   type: HypnosisType.SUGGESTION;
 }
 
-export type HypnosisSuggestionReference = Reference<HypnosisSuggestion, undefined>;
+export type HypnosisSuggestionReference = Reference<HypnosisSuggestion, never>;

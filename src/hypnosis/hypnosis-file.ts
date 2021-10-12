@@ -25,4 +25,4 @@ export interface HypnosisFile extends CreativeWork, HypnosisThing {
   type: HypnosisType.FILE;
 }
 
-export type HypnosisFileReference = Reference<HypnosisFile, undefined>;
+export type HypnosisFileReference = Reference<HypnosisFile, never>;

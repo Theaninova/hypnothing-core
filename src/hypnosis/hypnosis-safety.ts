@@ -12,4 +12,4 @@ export interface HypnosisSafetyGuard extends CreativeWork, TranceWithIntroductio
   type: HypnosisType.SAFETY;
 }
 
-export type HypnosisSafetyGuardReference = Reference<HypnosisSafetyGuard, undefined>;
+export type HypnosisSafetyGuardReference = Reference<HypnosisSafetyGuard, never>;

@@ -1,11 +1,10 @@
-import {Uuid} from './schema.org';
+import {HypnosisThing} from './hypnosis';
 
 export type RecursivePartial<T> = {[P in keyof T]?: RecursivePartial<T[P]>};
 
-export interface Reference<G, T extends RecursivePartial<G> | undefined> {
-  cache: T;
-  reference: Uuid;
-}
+export type Reference<G extends HypnosisThing, T extends keyof G> = {
+  [P in T | 'uuid']: RecursivePartial<G[P]>;
+};
 
 export interface Map<T> {
   [key: string]: T;
