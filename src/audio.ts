@@ -16,7 +16,6 @@ export interface BinauralBeat {
  */
 export interface ThingWithAudio<T extends AudioOptions[]> {
   audio: T;
-  spokenLanguages: Record<string, AuthorReference[]>;
 }
 
 /**
@@ -36,7 +35,7 @@ export type Timestamp = Keyword;
 
 export type AudioOptions = AudioReference[];
 
-export type AudioReference = Reference<AudioFile, 'uuid'>;
+export type AudioReference = Reference<AudioFile, 'uuid' | 'language' | 'speaker'>;
 
 export interface AudioFile extends HypnosisThing {
   slice?: {
