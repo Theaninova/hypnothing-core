@@ -1,3 +1,12 @@
+## [1.9.1](https://github.com/wulkanat/hypnothing-core/compare/v1.9.0...v1.9.1) (2021-10-12)
+
+
+### Features
+
+* remove cached values from audio reference ([9ad3f12](https://github.com/wulkanat/hypnothing-core/commit/9ad3f123793e20b6bef304e26e0b67084a614628))
+
+
+
 # [1.9.0](https://github.com/wulkanat/hypnothing-core/compare/v1.8.2...v1.9.0) (2021-10-12)
 
 
