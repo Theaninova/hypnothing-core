@@ -1,4 +1,4 @@
-## [1.6.2](https://github.com/wulkanat/hypnothing-core/compare/v1.7.0...v1.6.2) (2021-10-12)
+## [1.7.1](https://github.com/wulkanat/hypnothing-core/compare/v1.7.0...v1.6.2) (2021-10-12)
 
 
 ### Features
