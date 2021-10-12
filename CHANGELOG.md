@@ -1,3 +1,12 @@
+## [1.8.1](https://github.com/wulkanat/hypnothing-core/compare/v1.8.0...v1.8.1) (2021-10-12)
+
+
+### Features
+
+* re-add audio options ([5bdaef9](https://github.com/wulkanat/hypnothing-core/commit/5bdaef909ecb7e9ba91d46feeed900625da34f83))
+
+
+
 # [1.8.0](https://github.com/wulkanat/hypnothing-core/compare/v1.6.2...v1.8.0) (2021-10-12)
 
 
