@@ -13,3 +13,10 @@ export interface HypnosisWaker extends CreativeWork, HypnosisThing {
 }
 
 export type HypnosisWakerReference = Reference<HypnosisWaker, 'uuid'>;
+
+/**
+ * Hypnosis File type guard
+ */
+export function isHypnosisWaker(thing: HypnosisThing): thing is HypnosisWaker {
+  return thing.type === 'waker';
+}

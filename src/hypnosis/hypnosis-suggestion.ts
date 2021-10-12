@@ -25,3 +25,10 @@ export interface HypnosisSuggestion extends CreativeWork, TranceSection, Hypnosi
 }
 
 export type HypnosisSuggestionReference = Reference<HypnosisSuggestion, 'uuid'>;
+
+/**
+ * Hypnosis Suggestion type guard
+ */
+export function isHypnosisSuggestion(thing: HypnosisThing): thing is HypnosisSuggestion {
+  return thing.type === 'suggestion';
+}

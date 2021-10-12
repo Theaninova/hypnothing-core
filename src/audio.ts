@@ -39,6 +39,13 @@ export interface AudioFile extends HypnosisThing {
 export type BinauralKeyframe = Keyframe<BinauralBeat>;
 
 /**
+ * Hypnosis File type guard
+ */
+export function isAudioFile(thing: HypnosisThing): thing is AudioFile {
+  return thing.type === 'audio file';
+}
+
+/**
  * https://www.psychologytoday.com/us/basics/binaural-beats
  */
 export type BinauralWaveChoice = KeywordLiteral<'beta' | 'alpha' | 'delta' | 'theta'>;

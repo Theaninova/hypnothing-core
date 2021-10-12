@@ -15,3 +15,10 @@ export interface TranceInduction extends CreativeWork, TranceSection, HypnosisTh
 }
 
 export type TranceInductionReference = Reference<TranceInduction, 'uuid'>;
+
+/**
+ * Hypnosis File type guard
+ */
+export function isTranceInduction(thing: HypnosisThing): thing is TranceInduction {
+  return thing.type === 'induction';
+}

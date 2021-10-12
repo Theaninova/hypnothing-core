@@ -13,3 +13,10 @@ export interface HypnosisSafetyGuard extends CreativeWork, TranceWithIntroductio
 }
 
 export type HypnosisSafetyGuardReference = Reference<HypnosisSafetyGuard, 'uuid'>;
+
+/**
+ * Hypnosis File type guard
+ */
+export function isHypnosisSafetyGuard(thing: HypnosisThing): thing is HypnosisSafetyGuard {
+  return thing.type === 'safety';
+}

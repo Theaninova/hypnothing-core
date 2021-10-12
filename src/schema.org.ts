@@ -21,6 +21,13 @@ export interface Author extends HypnosisThing {
 
 export type AuthorReference = Reference<Author, 'uuid'>;
 
+/**
+ * Hypnosis File type guard
+ */
+export function isAuthor(thing: HypnosisThing): thing is Author {
+  return thing.type === 'author';
+}
+
 export interface CreativeWork {
   title: SortableDucet<Keyword>;
 

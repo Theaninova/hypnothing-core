@@ -17,3 +17,10 @@ export interface HypnosisTrigger extends CreativeWork, TranceWithIntroductionAnd
 }
 
 export type HypnosisTriggerReference = Reference<HypnosisTrigger, 'uuid'>;
+
+/**
+ * Hypnosis Trigger type guard
+ */
+export function isHypnosisTrigger(thing: HypnosisThing): thing is HypnosisTrigger {
+  return thing.type === 'trigger';
+}
