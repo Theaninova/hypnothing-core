@@ -1,3 +1,13 @@
+## [1.6.2](https://github.com/wulkanat/hypnothing-core/compare/v1.7.0...v1.6.2) (2021-10-12)
+
+
+### Features
+
+* improve reference types ([05b5cdc](https://github.com/wulkanat/hypnothing-core/commit/05b5cdc5eca6606e102c701dfad44ab2f69db5a0))
+* temporarily remove schema generation ([2ad1732](https://github.com/wulkanat/hypnothing-core/commit/2ad173246fa1b13c0bed4d94c42223c995e09c2a))
+
+
+
 # [1.7.0](https://github.com/wulkanat/hypnothing-core/compare/v1.6.1...v1.7.0) (2021-10-12)
 
 
