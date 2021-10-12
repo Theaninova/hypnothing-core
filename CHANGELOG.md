@@ -1,3 +1,12 @@
+# [1.9.0](https://github.com/wulkanat/hypnothing-core/compare/v1.8.2...v1.9.0) (2021-10-12)
+
+
+### Features
+
+* thing with audio instead of random keys ([7660851](https://github.com/wulkanat/hypnothing-core/commit/76608516feaf46c1f49fbfc25c2279261450770c))
+
+
+
 ## [1.8.2](https://github.com/wulkanat/hypnothing-core/compare/v1.8.1...v1.8.2) (2021-10-12)
 
 
