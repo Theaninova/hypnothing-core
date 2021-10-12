@@ -1,4 +1,4 @@
-import {AudioReference, BinauralKeyframe, VolumeKeyframe} from '../audio';
+import {AudioOptions, BinauralKeyframe, VolumeKeyframe} from '../audio';
 import {Float, Sortable} from '../elasticsearch';
 
 export interface TranceSection {
@@ -10,22 +10,22 @@ export interface TranceSection {
 }
 
 export interface TranceWithIntroductionAndReminder {
-  introductionAudioOptions: AudioReference;
+  introductionAudioOptions: AudioOptions;
 
-  reminderAudioOptions: AudioReference;
+  reminderAudioOptions: AudioOptions;
 }
 
 export interface TranceWithShortLongAndSummary {
   /**
    * An introduction when the overview is spoken
    */
-  overviewIntroductionAudioOptions: AudioReference;
+  overviewIntroductionAudioOptions: AudioOptions;
 
-  shortAudioOptions: AudioReference;
+  shortAudioOptions: AudioOptions;
 
-  longAudioOptions: AudioReference;
+  longAudioOptions: AudioOptions;
 
-  summaryAudioOptions: AudioReference;
+  summaryAudioOptions: AudioOptions;
 }
 
 /**
