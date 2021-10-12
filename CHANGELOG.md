@@ -1,3 +1,12 @@
+## [1.9.2](https://github.com/wulkanat/hypnothing-core/compare/v1.9.1...v1.9.2) (2021-10-12)
+
+
+### Features
+
+* revert to reference ([f4ce924](https://github.com/wulkanat/hypnothing-core/commit/f4ce924b6d735f1dfc3a2ca0578e788e0cbface8))
+
+
+
 ## [1.9.1](https://github.com/wulkanat/hypnothing-core/compare/v1.9.0...v1.9.1) (2021-10-12)
 
 
