@@ -1,6 +1,7 @@
 import {CreativeWork} from '../schema.org';
 import {TranceWithIntroductionAndReminder} from '../trance/trance';
 import {HypnosisThing, HypnosisType} from '../hypnosis';
+import {Reference} from '../util';
 
 /**
  * @indexable
@@ -18,3 +19,5 @@ export interface HypnosisTrigger extends CreativeWork, TranceWithIntroductionAnd
 
   type: HypnosisType.TRIGGER;
 }
+
+export type HypnosisTriggerReference = Reference<HypnosisTrigger, undefined>;

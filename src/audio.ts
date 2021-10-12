@@ -1,6 +1,7 @@
 import {Keyframe} from './keyframes';
 import {HypnosisThing, HypnosisType} from './hypnosis';
-import {Uuid} from './schema.org';
+import {AuthorReference, Uuid} from './schema.org';
+import {Reference} from './util';
 
 export type VolumeKeyframe = Keyframe<VolumeChoice>;
 
@@ -16,7 +17,29 @@ export interface BinauralBeat {
  */
 export type Timestamp = string;
 
-export type AudioOptions = Uuid[];
+export type AudioReference = Reference<
+  AudioFile,
+  {
+    /**
+     * @inheritTags audio file::language
+     */
+    language: string;
+
+    speaker: AuthorReference;
+  }
+>;
+
+/**
+ * This is unfortunately needed to enable filtering
+ */
+export interface AudioOption {
+  /**
+   * @keyword
+   */
+  language: 'en';
+  speaker: Uuid;
+  reference: Uuid;
+}
 
 export interface AudioFile extends HypnosisThing {
   slice?: {
@@ -30,7 +53,7 @@ export interface AudioFile extends HypnosisThing {
    */
   language: string;
 
-  speaker: Uuid;
+  speaker: AuthorReference;
 
   type: HypnosisType.AUDIO_FILE;
 }

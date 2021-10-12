@@ -1,4 +1,5 @@
 import {HypnosisThing, HypnosisType} from './hypnosis';
+import {Reference} from './util';
 
 export enum Gender {
   Male = 'male',
@@ -46,9 +47,7 @@ export interface Author extends HypnosisThing {
   type: HypnosisType.AUTHOR;
 }
 
-export interface Map<T> {
-  [key: string]: T;
-}
+export type AuthorReference = Reference<Author, undefined>;
 
 export interface CreativeWork {
   /**

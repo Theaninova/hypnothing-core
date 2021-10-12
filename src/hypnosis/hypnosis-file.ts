@@ -1,22 +1,28 @@
-import {CreativeWork, Uuid} from '../schema.org';
+import {CreativeWork} from '../schema.org';
 import {TranceDepth} from '../trance/trance';
 import {HypnosisThing, HypnosisType} from '../hypnosis';
-import {AudioOptions} from '../audio';
+import {AudioReference} from '../audio';
+import {Reference} from '../util';
+import {HypnosisSafetyGuardReference} from './hypnosis-safety';
+import {HypnosisWarningReference} from './hypnosis-warning';
+import {HypnosisSuggestionReference} from './hypnosis-suggestion';
 
 /**
  * @indexable
  */
 export interface HypnosisFile extends CreativeWork, HypnosisThing {
-  overviewAudioOptions: AudioOptions;
+  overviewAudioOptions: AudioReference;
 
-  safeties: Uuid[];
-  warnings: Uuid[];
-  suggestions: Uuid[];
+  safeties: HypnosisSafetyGuardReference[];
+  warnings: HypnosisWarningReference[];
+  suggestions: HypnosisSuggestionReference[];
 
-  goodbyeAudioOptions?: AudioOptions;
+  goodbyeAudioOptions?: AudioReference;
 
   minimumTranceDepth: TranceDepth;
   preferredTranceDepth: TranceDepth;
 
   type: HypnosisType.FILE;
 }
+
+export type HypnosisFileReference = Reference<HypnosisFile, undefined>;
