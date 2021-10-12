@@ -9,7 +9,7 @@ import {Reference} from '../util';
 export interface HypnosisSafetyGuard extends CreativeWork, TranceWithIntroductionAndReminder, HypnosisThing {
   canBeDisabled: boolean;
 
-  type: HypnosisType.SAFETY;
+  type: HypnosisType<'safety'>;
 }
 
-export type HypnosisSafetyGuardReference = Reference<HypnosisSafetyGuard, never>;
+export type HypnosisSafetyGuardReference = Reference<HypnosisSafetyGuard, 'uuid'>;

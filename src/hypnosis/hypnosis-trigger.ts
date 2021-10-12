@@ -2,6 +2,7 @@ import {CreativeWork} from '../schema.org';
 import {TranceWithIntroductionAndReminder} from '../trance/trance';
 import {HypnosisThing, HypnosisType} from '../hypnosis';
 import {Reference} from '../util';
+import {Aggregatable, Filterable, Keyword, SortableDucet} from '../elasticsearch';
 
 /**
  * @indexable
@@ -9,15 +10,10 @@ import {Reference} from '../util';
 export interface HypnosisTrigger extends CreativeWork, TranceWithIntroductionAndReminder, HypnosisThing {
   /**
    * For example 'trigger', 'time limited', 'curse', 'permanent'
-   *
-   * @keyword
-   * @filterable
-   * @sortable ducet
-   * @aggregatable
    */
-  triggerType: string;
+  triggerType: Aggregatable<Filterable<SortableDucet<Keyword>>>;
 
-  type: HypnosisType.TRIGGER;
+  type: HypnosisType<'trigger'>;
 }
 
-export type HypnosisTriggerReference = Reference<HypnosisTrigger, never>;
+export type HypnosisTriggerReference = Reference<HypnosisTrigger, 'uuid'>;

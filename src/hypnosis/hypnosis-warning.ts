@@ -6,7 +6,7 @@ import {Reference} from '../util';
  * @indexable
  */
 export interface HypnosisWarning extends CreativeWork, HypnosisThing {
-  type: HypnosisType.WARNING;
+  type: HypnosisType<'warning'>;
 }
 
-export type HypnosisWarningReference = Reference<HypnosisWarning, never>;
+export type HypnosisWarningReference = Reference<HypnosisWarning, 'uuid'>;

@@ -7,12 +7,9 @@ import {Reference} from '../util';
  * @indexable
  */
 export interface HypnosisWaker extends CreativeWork, HypnosisThing {
-  /**
-   * @keyword
-   */
   audioOptions: AudioReference;
 
-  type: HypnosisType.WAKER;
+  type: HypnosisType<'waker'>;
 }
 
-export type HypnosisWakerReference = Reference<HypnosisWaker, never>;
+export type HypnosisWakerReference = Reference<HypnosisWaker, 'uuid'>;

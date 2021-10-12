@@ -1,4 +1,5 @@
 import {AudioReference, BinauralKeyframe, VolumeKeyframe} from '../audio';
+import {Float, Sortable} from '../elasticsearch';
 
 export interface TranceSection {
   /**
@@ -9,14 +10,8 @@ export interface TranceSection {
 }
 
 export interface TranceWithIntroductionAndReminder {
-  /**
-   * @keyword
-   */
   introductionAudioOptions: AudioReference;
 
-  /**
-   * @keyword
-   */
   reminderAudioOptions: AudioReference;
 }
 
@@ -26,19 +21,10 @@ export interface TranceWithShortLongAndSummary {
    */
   overviewIntroductionAudioOptions: AudioReference;
 
-  /**
-   * @keyword
-   */
   shortAudioOptions: AudioReference;
 
-  /**
-   * @keyword
-   */
   longAudioOptions: AudioReference;
 
-  /**
-   * @keyword
-   */
   summaryAudioOptions: AudioReference;
 }
 
@@ -46,8 +32,5 @@ export interface TranceWithShortLongAndSummary {
  * A depth rating where 0 is awake and +Infinity is infinitely deep.
  *
  * Default should be 1, and of course just an estimate
- *
- * @float
- * @sortable
  */
-export type TranceDepth = number;
+export type TranceDepth = Sortable<Float>;

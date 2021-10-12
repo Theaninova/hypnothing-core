@@ -1,70 +1,35 @@
 import {HypnosisThing, HypnosisType} from './hypnosis';
 import {Reference} from './util';
+import {Aggregatable, Filterable, Keyword, SortableDucet, Text} from './elasticsearch';
 
-export enum Gender {
-  Male = 'male',
-  Female = 'female',
-}
-
-/**
- * @keyword
- * @filterable
- */
-export type Uuid = string;
+export type Uuid = Filterable<Keyword>;
 
 /**
  * @indexable
  */
 export interface Author extends HypnosisThing {
-  /**
-   * @keyword
-   * @filterable
-   * @aggregatable
-   */
-  gender: string | Gender;
+  gender: Aggregatable<Filterable<Keyword>>;
 
-  /**
-   * @keyword
-   * @filterable
-   * @aggregatable
-   */
-  givenName: string;
+  givenName: Aggregatable<Filterable<Keyword>>;
 
-  /**
-   * @keyword
-   * @filterable
-   * @aggregatable
-   */
-  familyName: string;
+  familyName: Aggregatable<Filterable<Keyword>>;
 
-  /**
-   * @keyword
-   * @filterable
-   * @aggregatable
-   */
-  additionalName: string;
+  additionalName: Aggregatable<Filterable<Keyword>>;
 
-  type: HypnosisType.AUTHOR;
+  type: HypnosisType<'author'>;
 }
 
-export type AuthorReference = Reference<Author, never>;
+export type AuthorReference = Reference<Author, 'uuid'>;
 
 export interface CreativeWork {
-  /**
-   * @keyword
-   * @sortable
-   */
-  title: string;
+  title: SortableDucet<Keyword>;
 
-  /**
-   * @text
-   */
-  description: string;
+  description: Text;
 
   /**
    * The author of the work (usually the writer)
    */
-  author: Uuid;
+  author: Reference<Author, 'uuid'>;
 
   /**
    * If there are any alternate versions (say with different intensities)

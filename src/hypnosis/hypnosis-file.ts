@@ -22,7 +22,7 @@ export interface HypnosisFile extends CreativeWork, HypnosisThing {
   minimumTranceDepth: TranceDepth;
   preferredTranceDepth: TranceDepth;
 
-  type: HypnosisType.FILE;
+  type: HypnosisType<'file'>;
 }
 
-export type HypnosisFileReference = Reference<HypnosisFile, never>;
+export type HypnosisFileReference = Reference<HypnosisFile, 'uuid'>;

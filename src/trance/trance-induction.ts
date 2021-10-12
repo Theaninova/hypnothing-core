@@ -11,7 +11,7 @@ export interface TranceInduction extends CreativeWork, TranceSection, HypnosisTh
   audioOptions: AudioReference;
   tranceDepthRating: TranceDepth;
 
-  type: HypnosisType.INDUCTION;
+  type: HypnosisType<'induction'>;
 }
 
-export type TranceInductionReference = Reference<TranceInduction, never>;
+export type TranceInductionReference = Reference<TranceInduction, 'uuid'>;

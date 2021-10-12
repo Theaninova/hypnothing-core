@@ -2,6 +2,7 @@ import {CreativeWork} from '../schema.org';
 import {TranceSection, TranceWithShortLongAndSummary} from '../trance/trance';
 import {HypnosisThing, HypnosisType} from '../hypnosis';
 import {Reference} from '../util';
+import {Text} from '../elasticsearch';
 
 /**
  * @indexable
@@ -12,19 +13,15 @@ export interface HypnosisSuggestion extends CreativeWork, TranceSection, Hypnosi
 
   /**
    * Just short form warnings
-   *
-   * @text
    */
-  warnings: string[];
+  warnings: Text[];
 
   /**
    * Just a short form safeties list
-   *
-   * @text
    */
-  safeties: string[];
+  safeties: Text[];
 
-  type: HypnosisType.SUGGESTION;
+  type: HypnosisType<'suggestion'>;
 }
 
-export type HypnosisSuggestionReference = Reference<HypnosisSuggestion, never>;
+export type HypnosisSuggestionReference = Reference<HypnosisSuggestion, 'uuid'>;

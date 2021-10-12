@@ -7,18 +7,7 @@ import {HypnosisTrigger} from './hypnosis/hypnosis-trigger';
 import {HypnosisWaker} from './hypnosis/hypnosis-waker';
 import {HypnosisWarning} from './hypnosis/hypnosis-warning';
 import {AudioFile} from './audio';
-
-export enum HypnosisType {
-  AUTHOR = 'author',
-  FILE = 'file',
-  INDUCTION = 'induction',
-  SAFETY = 'safety',
-  SUGGESTION = 'suggestion',
-  TRIGGER = 'trigger',
-  WAKER = 'waker',
-  WARNING = 'warning',
-  AUDIO_FILE = 'audio file',
-}
+import {Aggregatable, Filterable, Keyword, KeywordLiteral, SortableDucet} from './elasticsearch';
 
 export type SpecificHypnosisType<T> = T extends 'author'
   ? Author
@@ -40,6 +29,10 @@ export type SpecificHypnosisType<T> = T extends 'author'
   ? AudioFile
   : never;
 
+export type HypnosisType<T extends HypnosisTypeEnumerator> = Aggregatable<
+  Filterable<SortableDucet<KeywordLiteral<T>>>
+>;
+
 export type HypnosisTypeEnumerator =
   | 'author'
   | 'file'
@@ -52,24 +45,9 @@ export type HypnosisTypeEnumerator =
   | 'audio file';
 
 export interface HypnosisThing {
-  /**
-   * @keyword
-   * @sortable ducet
-   * @filterable
-   * @aggregatable global
-   */
-  type: HypnosisType;
+  type: HypnosisType<HypnosisTypeEnumerator>;
 
-  /**
-   * @keyword
-   * @filterable
-   * @aggregatable
-   */
-  tags?: string[];
+  tags?: Aggregatable<Filterable<Keyword>>[];
 
-  /**
-   * @keyword
-   * @filterable
-   */
   uuid: Uuid;
 }

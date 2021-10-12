@@ -1,7 +1,8 @@
 import {Keyframe} from './keyframes';
 import {HypnosisThing, HypnosisType} from './hypnosis';
-import {AuthorReference, Uuid} from './schema.org';
+import {AuthorReference} from './schema.org';
 import {Reference} from './util';
+import {Keyword, KeywordLiteral} from './elasticsearch';
 
 export type VolumeKeyframe = Keyframe<VolumeChoice>;
 
@@ -15,71 +16,29 @@ export interface BinauralBeat {
  *
  * @pattern \d+:\d{2}(\.\d+)?
  */
-export type Timestamp = string;
+export type Timestamp = Keyword;
 
-export type AudioReference = Reference<AudioFile, 'language' | 'speaker'>;
-
-/**
- * This is unfortunately needed to enable filtering
- */
-export interface AudioOption {
-  /**
-   * @keyword
-   */
-  language: 'en';
-  speaker: Uuid;
-  reference: Uuid;
-}
+export type AudioReference = Reference<AudioFile, 'uuid' | 'language' | 'speaker'>;
 
 export interface AudioFile extends HypnosisThing {
   slice?: {
     start?: Timestamp;
     end?: Timestamp;
   };
-  src: string;
+  src: Keyword;
 
-  /**
-   * @keyword
-   */
-  language: string;
+  language: Keyword;
 
   speaker: AuthorReference;
 
-  type: HypnosisType.AUDIO_FILE;
+  type: HypnosisType<'audio file'>;
 }
 
 export type BinauralKeyframe = Keyframe<BinauralBeat>;
 
 /**
- * TODO: check if this works
- *
  * https://www.psychologytoday.com/us/basics/binaural-beats
- *
- * @keyword
  */
-export enum BinauralWaveChoice {
-  BETA = 'beta',
-  ALPHA = 'alpha',
-  DELTA = 'delta',
-  THETA = 'theta',
-}
+export type BinauralWaveChoice = KeywordLiteral<'beta' | 'alpha' | 'delta' | 'theta'>;
 
-/**
- * TODO: check if this works
- *
- * @keyword
- */
-export enum VolumeChoice {
-  OFF = 'off',
-  SILENT = 'silent',
-  NORMAL = 'normal',
-  LOUD = 'loud',
-  /**
-   * Use previous or value
-   */
-  INHERIT = 'inherit',
-  /**
-   * Use next value
-   */
-  PREFETCH = 'prefetch',
-}
+export type VolumeChoice = KeywordLiteral<'off' | 'silent' | 'normal' | 'loud' | 'inherit' | 'prefetch'>;
