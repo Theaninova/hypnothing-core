@@ -1,3 +1,13 @@
+# [1.7.0](https://github.com/wulkanat/hypnothing-core/compare/v1.6.1...v1.7.0) (2021-10-12)
+
+
+### Features
+
+* replace Uuids with reference types ([8f010fb](https://github.com/wulkanat/hypnothing-core/commit/8f010fba8be07e7efb6f4a0c53234f9ce0b227c9))
+* temporarily remove mapping generator ([fd79ece](https://github.com/wulkanat/hypnothing-core/commit/fd79ece0954f66ec7761d458815de96dce2963db))
+
+
+
 ## [1.6.1](https://github.com/wulkanat/hypnothing-core/compare/v1.6.0...v1.6.1) (2021-10-11)
 
 
