@@ -1,4 +1,13 @@
-## [1.7.1](https://github.com/wulkanat/hypnothing-core/compare/v1.7.0...v1.6.2) (2021-10-12)
+# [1.8.0](https://github.com/wulkanat/hypnothing-core/compare/v1.6.2...v1.8.0) (2021-10-12)
+
+
+### Features
+
+* rework mapping type organization ([34a3b47](https://github.com/wulkanat/hypnothing-core/commit/34a3b47d8302d6d35ea4f9f628ac06ba540b24e8))
+
+
+
+## [1.6.2](https://github.com/wulkanat/hypnothing-core/compare/v1.7.0...v1.6.2) (2021-10-12)
 
 
 ### Features
