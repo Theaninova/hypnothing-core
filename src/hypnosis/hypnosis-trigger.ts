@@ -1,13 +1,16 @@
 import {CreativeWork} from '../schema.org';
-import {TranceWithIntroductionAndReminder} from '../trance/trance';
 import {HypnosisThing, HypnosisType} from '../hypnosis';
 import {Reference} from '../util';
 import {Aggregatable, Filterable, Keyword, SortableDucet} from '../elasticsearch';
+import {AudioOptions, ThingWithAudio} from '../audio';
 
 /**
  * @indexable
  */
-export interface HypnosisTrigger extends CreativeWork, TranceWithIntroductionAndReminder, HypnosisThing {
+export interface HypnosisTrigger
+  extends CreativeWork,
+    ThingWithAudio<[AudioOptions, AudioOptions]>,
+    HypnosisThing {
   /**
    * For example 'trigger', 'time limited', 'curse', 'permanent'
    */

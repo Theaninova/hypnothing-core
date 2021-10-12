@@ -1,14 +1,13 @@
 import {CreativeWork} from '../schema.org';
-import {TranceDepth, TranceSection} from './trance';
+import {TranceDepth} from './trance';
 import {HypnosisThing, HypnosisType} from '../hypnosis';
-import {AudioOptions} from '../audio';
+import {AudioOptions, ThingWithAudio} from '../audio';
 import {Reference} from '../util';
 
 /**
  * @indexable
  */
-export interface TranceInduction extends CreativeWork, TranceSection, HypnosisThing {
-  audioOptions: AudioOptions;
+export interface TranceInduction extends CreativeWork, ThingWithAudio<[AudioOptions]>, HypnosisThing {
   tranceDepthRating: TranceDepth;
 
   type: HypnosisType<'induction'>;

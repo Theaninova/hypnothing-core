@@ -12,6 +12,22 @@ export interface BinauralBeat {
 }
 
 /**
+ * Warning, this has to be maintained...
+ */
+export interface ThingWithAudio<T extends AudioOptions[]> {
+  audio: T;
+  spokenLanguages: Record<string, AuthorReference[]>;
+}
+
+/**
+ * Thing with audio type guard
+ */
+// eslint-disable-next-line @typescript-eslint/ban-types
+export function isThingWithAudio(thing: object): thing is ThingWithAudio<AudioOptions[]> {
+  return 'audio' in thing && 'spokenLanguages' in thing;
+}
+
+/**
  * Timestamp ('00:42.222')
  *
  * @pattern \d+:\d{2}(\.\d+)?
@@ -32,6 +48,12 @@ export interface AudioFile extends HypnosisThing {
   language: Keyword;
 
   speaker: AuthorReference;
+
+  /**
+   * Keyframes of where the binaural should start or stop or change in loudness
+   */
+  binauralKeyframes?: BinauralKeyframe[];
+  noiseKeyframes?: VolumeKeyframe[];
 
   type: HypnosisType<'audio file'>;
 }

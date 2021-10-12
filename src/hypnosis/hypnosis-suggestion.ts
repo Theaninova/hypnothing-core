@@ -1,15 +1,17 @@
 import {CreativeWork} from '../schema.org';
-import {TranceSection, TranceWithShortLongAndSummary} from '../trance/trance';
 import {HypnosisThing, HypnosisType} from '../hypnosis';
 import {Reference} from '../util';
 import {Text} from '../elasticsearch';
+import {AudioOptions, ThingWithAudio} from '../audio';
 
 /**
  * @indexable
  */
-export interface HypnosisSuggestion extends CreativeWork, TranceSection, HypnosisThing {
+export interface HypnosisSuggestion
+  extends CreativeWork,
+    HypnosisThing,
+    ThingWithAudio<[AudioOptions, AudioOptions, AudioOptions, AudioOptions]> {
   isRequired: boolean;
-  content: TranceWithShortLongAndSummary;
 
   /**
    * Just short form warnings

@@ -1,14 +1,12 @@
 import {CreativeWork} from '../schema.org';
 import {HypnosisThing, HypnosisType} from '../hypnosis';
-import {AudioOptions} from '../audio';
+import {AudioOptions, ThingWithAudio} from '../audio';
 import {Reference} from '../util';
 
 /**
  * @indexable
  */
-export interface HypnosisWaker extends CreativeWork, HypnosisThing {
-  audioOptions: AudioOptions;
-
+export interface HypnosisWaker extends CreativeWork, HypnosisThing, ThingWithAudio<[AudioOptions]> {
   type: HypnosisType<'waker'>;
 }
 
