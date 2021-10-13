@@ -23,7 +23,7 @@ export interface ThingWithAudio<T extends AudioOptions[]> {
  */
 // eslint-disable-next-line @typescript-eslint/ban-types
 export function isThingWithAudio(thing: object): thing is ThingWithAudio<AudioOptions[]> {
-  return 'audio' in thing && 'spokenLanguages' in thing;
+  return 'audio' in thing;
 }
 
 /**
@@ -53,6 +53,14 @@ export interface AudioFile extends HypnosisThing {
    */
   binauralKeyframes?: BinauralKeyframe[];
   noiseKeyframes?: VolumeKeyframe[];
+
+  /**
+   * If the audio file already contains binaurals.
+   *
+   * The specified keyframes will still be respected for blending between other sections.
+   */
+  bakedBinaurals?: boolean;
+  bakedNoise?: boolean;
 
   type: HypnosisType<'audio file'>;
 }
