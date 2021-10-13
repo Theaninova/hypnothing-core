@@ -1,3 +1,12 @@
+## [1.9.3](https://github.com/wulkanat/hypnothing-core/compare/v1.9.2...v1.9.3) (2021-10-13)
+
+
+### Features
+
+* baked binaurals & noise ([2cb2031](https://github.com/wulkanat/hypnothing-core/commit/2cb2031ee2bcf57a662d808904a64a6dd3bc4ed3))
+
+
+
 ## [1.9.2](https://github.com/wulkanat/hypnothing-core/compare/v1.9.1...v1.9.2) (2021-10-12)
 
 
