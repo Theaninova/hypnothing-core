@@ -1,3 +1,12 @@
+## [1.10.2](https://github.com/wulkanat/hypnothing-core/compare/v1.10.1...v1.10.2) (2021-10-14)
+
+
+### Reverts
+
+* Revert "feat: type can be an arbitrary string for translations" ([1fd7a7d](https://github.com/wulkanat/hypnothing-core/commit/1fd7a7d7ec2ac59f9ef5bb863fb790cdc84c0222))
+
+
+
 ## [1.10.1](https://github.com/wulkanat/hypnothing-core/compare/v1.10.0...v1.10.1) (2021-10-14)
 
 
