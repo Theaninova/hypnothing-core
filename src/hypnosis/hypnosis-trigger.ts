@@ -1,6 +1,11 @@
-import {CreativeWork} from '../schema.org';
-import {HypnosisThing, HypnosisType} from '../hypnosis';
-import {Reference} from '../util';
+import {CreativeWork, CreativeWorkTranslatableProperties} from '../schema.org';
+import {
+  HypnosisThing,
+  HypnosisThingTranslatableProperties,
+  HypnosisType,
+  TranslatableThing,
+} from '../hypnosis';
+import {KeysOf, Reference} from '../util';
 import {Aggregatable, Filterable, Keyword, SortableDucet} from '../elasticsearch';
 import {AudioOptions, ThingWithAudio} from '../audio';
 
@@ -10,7 +15,13 @@ import {AudioOptions, ThingWithAudio} from '../audio';
 export interface HypnosisTrigger
   extends CreativeWork,
     ThingWithAudio<[AudioOptions, AudioOptions]>,
-    HypnosisThing {
+    HypnosisThing,
+    TranslatableThing<
+      KeysOf<
+        HypnosisTrigger,
+        HypnosisThingTranslatableProperties | CreativeWorkTranslatableProperties | 'triggerType'
+      >
+    > {
   /**
    * For example 'trigger', 'time limited', 'curse', 'permanent'
    */

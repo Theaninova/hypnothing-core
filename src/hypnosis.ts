@@ -8,6 +8,7 @@ import {HypnosisWaker} from './hypnosis/hypnosis-waker';
 import {HypnosisWarning} from './hypnosis/hypnosis-warning';
 import {AudioFile} from './audio';
 import {Aggregatable, Filterable, Keyword, KeywordLiteral, SortableDucet} from './elasticsearch';
+import {RecursivePartial} from './util';
 
 export type SpecificHypnosisType<T> = T extends 'author'
   ? Author
@@ -50,4 +51,10 @@ export interface HypnosisThing {
   tags?: Aggregatable<Filterable<Keyword>>[];
 
   uuid: Uuid;
+}
+
+export type HypnosisThingTranslatableProperties = 'type' | 'tags';
+
+export interface TranslatableThing<T extends Record<string, unknown>> {
+  translations: Record<string, RecursivePartial<T>>;
 }

@@ -1,8 +1,13 @@
-import {CreativeWork} from '../schema.org';
+import {CreativeWork, CreativeWorkTranslatableProperties} from '../schema.org';
 import {TranceDepth} from '../trance/trance';
-import {HypnosisThing, HypnosisType} from '../hypnosis';
+import {
+  HypnosisThing,
+  HypnosisThingTranslatableProperties,
+  HypnosisType,
+  TranslatableThing,
+} from '../hypnosis';
 import {AudioOptions, ThingWithAudio} from '../audio';
-import {Reference} from '../util';
+import {KeysOf, Reference} from '../util';
 import {HypnosisSafetyGuardReference} from './hypnosis-safety';
 import {HypnosisWarningReference} from './hypnosis-warning';
 import {HypnosisSuggestionReference} from './hypnosis-suggestion';
@@ -13,7 +18,10 @@ import {HypnosisSuggestionReference} from './hypnosis-suggestion';
 export interface HypnosisFile
   extends CreativeWork,
     HypnosisThing,
-    ThingWithAudio<[AudioOptions, AudioOptions]> {
+    ThingWithAudio<[AudioOptions, AudioOptions]>,
+    TranslatableThing<
+      KeysOf<HypnosisFile, HypnosisThingTranslatableProperties | CreativeWorkTranslatableProperties>
+    > {
   safeties: HypnosisSafetyGuardReference[];
   warnings: HypnosisWarningReference[];
   suggestions: HypnosisSuggestionReference[];

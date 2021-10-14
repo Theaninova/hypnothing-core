@@ -1,7 +1,12 @@
 import {Keyframe} from './keyframes';
-import {HypnosisThing, HypnosisType} from './hypnosis';
+import {
+  HypnosisThing,
+  HypnosisThingTranslatableProperties,
+  HypnosisType,
+  TranslatableThing,
+} from './hypnosis';
 import {AuthorReference} from './schema.org';
-import {Reference} from './util';
+import {KeysOf, Reference} from './util';
 import {Keyword, KeywordLiteral} from './elasticsearch';
 
 export type VolumeKeyframe = Keyframe<VolumeChoice>;
@@ -37,7 +42,9 @@ export type AudioOptions = AudioReference[];
 
 export type AudioReference = Reference<AudioFile, 'uuid' | 'language' | 'speaker'>;
 
-export interface AudioFile extends HypnosisThing {
+export interface AudioFile
+  extends HypnosisThing,
+    TranslatableThing<KeysOf<AudioFile, HypnosisThingTranslatableProperties | 'language'>> {
   slice?: {
     start?: Timestamp;
     end?: Timestamp;

@@ -1,11 +1,21 @@
-import {CreativeWork} from '../schema.org';
-import {HypnosisThing, HypnosisType} from '../hypnosis';
-import {Reference} from '../util';
+import {CreativeWork, CreativeWorkTranslatableProperties} from '../schema.org';
+import {
+  HypnosisThing,
+  HypnosisThingTranslatableProperties,
+  HypnosisType,
+  TranslatableThing,
+} from '../hypnosis';
+import {KeysOf, Reference} from '../util';
 
 /**
  * @indexable
  */
-export interface HypnosisWarning extends CreativeWork, HypnosisThing {
+export interface HypnosisWarning
+  extends CreativeWork,
+    HypnosisThing,
+    TranslatableThing<
+      KeysOf<HypnosisWarning, HypnosisThingTranslatableProperties | CreativeWorkTranslatableProperties>
+    > {
   type: HypnosisType<'warning'>;
 }
 

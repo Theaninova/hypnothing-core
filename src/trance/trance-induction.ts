@@ -1,13 +1,24 @@
-import {CreativeWork} from '../schema.org';
+import {CreativeWork, CreativeWorkTranslatableProperties} from '../schema.org';
 import {TranceDepth} from './trance';
-import {HypnosisThing, HypnosisType} from '../hypnosis';
+import {
+  HypnosisThing,
+  HypnosisThingTranslatableProperties,
+  HypnosisType,
+  TranslatableThing,
+} from '../hypnosis';
 import {AudioOptions, ThingWithAudio} from '../audio';
-import {Reference} from '../util';
+import {KeysOf, Reference} from '../util';
 
 /**
  * @indexable
  */
-export interface TranceInduction extends CreativeWork, ThingWithAudio<[AudioOptions]>, HypnosisThing {
+export interface TranceInduction
+  extends CreativeWork,
+    ThingWithAudio<[AudioOptions]>,
+    HypnosisThing,
+    TranslatableThing<
+      KeysOf<TranceInduction, HypnosisThingTranslatableProperties | CreativeWorkTranslatableProperties>
+    > {
   tranceDepthRating: TranceDepth;
 
   type: HypnosisType<'induction'>;

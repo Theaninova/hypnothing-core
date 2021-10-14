@@ -1,12 +1,23 @@
-import {CreativeWork} from '../schema.org';
-import {HypnosisThing, HypnosisType} from '../hypnosis';
+import {CreativeWork, CreativeWorkTranslatableProperties} from '../schema.org';
+import {
+  HypnosisThing,
+  HypnosisThingTranslatableProperties,
+  HypnosisType,
+  TranslatableThing,
+} from '../hypnosis';
 import {AudioOptions, ThingWithAudio} from '../audio';
-import {Reference} from '../util';
+import {KeysOf, Reference} from '../util';
 
 /**
  * @indexable
  */
-export interface HypnosisWaker extends CreativeWork, HypnosisThing, ThingWithAudio<[AudioOptions]> {
+export interface HypnosisWaker
+  extends CreativeWork,
+    HypnosisThing,
+    ThingWithAudio<[AudioOptions]>,
+    TranslatableThing<
+      KeysOf<HypnosisWaker, HypnosisThingTranslatableProperties | CreativeWorkTranslatableProperties>
+    > {
   type: HypnosisType<'waker'>;
 }
 

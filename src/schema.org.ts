@@ -1,5 +1,10 @@
-import {HypnosisThing, HypnosisType} from './hypnosis';
-import {Reference} from './util';
+import {
+  HypnosisThing,
+  HypnosisThingTranslatableProperties,
+  HypnosisType,
+  TranslatableThing,
+} from './hypnosis';
+import {KeysOf, Reference} from './util';
 import {Aggregatable, Filterable, Keyword, SortableDucet, Text} from './elasticsearch';
 
 export type Uuid = Filterable<Keyword>;
@@ -7,7 +12,14 @@ export type Uuid = Filterable<Keyword>;
 /**
  * @indexable
  */
-export interface Author extends HypnosisThing {
+export interface Author
+  extends HypnosisThing,
+    TranslatableThing<
+      KeysOf<
+        Author,
+        HypnosisThingTranslatableProperties | 'gender' | 'givenName' | 'familyName' | 'additionalName'
+      >
+    > {
   gender: Aggregatable<Filterable<Keyword>>;
 
   givenName: Aggregatable<Filterable<Keyword>>;
@@ -27,6 +39,8 @@ export type AuthorReference = Reference<Author, 'uuid'>;
 export function isAuthor(thing: HypnosisThing): thing is Author {
   return thing.type === 'author';
 }
+
+export type CreativeWorkTranslatableProperties = 'title' | 'description';
 
 export interface CreativeWork {
   title: SortableDucet<Keyword>;

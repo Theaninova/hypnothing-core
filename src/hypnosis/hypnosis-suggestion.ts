@@ -1,6 +1,11 @@
-import {CreativeWork} from '../schema.org';
-import {HypnosisThing, HypnosisType} from '../hypnosis';
-import {Reference} from '../util';
+import {CreativeWork, CreativeWorkTranslatableProperties} from '../schema.org';
+import {
+  HypnosisThing,
+  HypnosisThingTranslatableProperties,
+  HypnosisType,
+  TranslatableThing,
+} from '../hypnosis';
+import {KeysOf, Reference} from '../util';
 import {Text} from '../elasticsearch';
 import {AudioOptions, ThingWithAudio} from '../audio';
 
@@ -10,7 +15,13 @@ import {AudioOptions, ThingWithAudio} from '../audio';
 export interface HypnosisSuggestion
   extends CreativeWork,
     HypnosisThing,
-    ThingWithAudio<[AudioOptions, AudioOptions, AudioOptions, AudioOptions]> {
+    ThingWithAudio<[AudioOptions, AudioOptions, AudioOptions, AudioOptions]>,
+    TranslatableThing<
+      KeysOf<
+        HypnosisSuggestion,
+        HypnosisThingTranslatableProperties | CreativeWorkTranslatableProperties | 'warnings' | 'safeties'
+      >
+    > {
   isRequired: boolean;
 
   /**
