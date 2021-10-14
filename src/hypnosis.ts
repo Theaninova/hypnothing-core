@@ -43,8 +43,7 @@ export type HypnosisTypeEnumerator =
   | 'trigger'
   | 'waker'
   | 'warning'
-  | 'audio file'
-  | string; // for translations
+  | 'audio file';
 
 export interface HypnosisThing {
   type: HypnosisType<HypnosisTypeEnumerator>;
