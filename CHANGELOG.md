@@ -1,3 +1,12 @@
+## [1.10.1](https://github.com/wulkanat/hypnothing-core/compare/v1.10.0...v1.10.1) (2021-10-14)
+
+
+### Features
+
+* type can be an arbitrary string for translations ([a0914d2](https://github.com/wulkanat/hypnothing-core/commit/a0914d2b1865856beab6c194489f7b3f77c9dbce))
+
+
+
 # [1.10.0](https://github.com/wulkanat/hypnothing-core/compare/v1.9.3...v1.10.0) (2021-10-14)
 
 
