@@ -25,7 +25,7 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-jsdoc": "36.1.1",
     "eslint-plugin-prettier": "4.0.0",
-    "eslint-plugin-unicorn": "36.0.0",
+    "eslint-plugin-unicorn": "39.0.0",
     "prettier": "2.4.1",
     "typescript-json-schema": "0.51.0",
     "rimraf": "3.0.2"
